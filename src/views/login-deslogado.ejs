@@ -1,0 +1,29 @@
+<%- include('includes/head') %>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Agenda</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/login/index">Entrar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 my-4">
+      <h1 class="text-center">Crie ou entre em sua conta.</h1>
+      <p class="alert alert-danger">Você saiu do sistema.</p>
+      <%- include('includes/messages'); %>
+    </div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>
