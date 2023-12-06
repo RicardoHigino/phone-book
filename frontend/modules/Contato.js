@@ -41,7 +41,8 @@ export default class Contato {
             error = true;
         }
 
-        if(phoneInput.value.length < 9){
+        // only numbers
+        if(!validator.isNumeric(phoneInput.value) || phoneInput.value.length < 9){
             this.criaErro(phoneInput, 'Telefone inválido.')
             error = true;
         }
