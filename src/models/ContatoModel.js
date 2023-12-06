@@ -23,6 +23,14 @@ Contato.prototype.register = async function(req) {
   if(this.errors.length > 0) return;
   
   this.body.criadoPor = req.session.user._id;
+
+  const telefoneExistente = await ContatoModel.findOne({ telefone: this.body.telefone, criadoPor: req.session.user._id });
+
+  if(telefoneExistente) {
+    this.errors.push('Contato já cadastrado.');
+    return;
+  }
+
   this.contato = await ContatoModel.create(this.body);
 };
 
