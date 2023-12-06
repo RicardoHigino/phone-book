@@ -58,5 +58,4 @@ app.on('Ready', () => {
   app.listen(port, () => {
     console.log(`Servidor executando na porta ${port} - Acesse http://localhost:${port}`);
   });
-
 });
