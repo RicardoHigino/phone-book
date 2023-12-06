@@ -54,13 +54,9 @@ app.use(csrfMiddleware);
 app.use(routes);
 
 // Inicialização do Servidor
-let server;
-
 app.on('Ready', () => {
-  const server = app.listen(port, () => {
+  app.listen(port, () => {
     console.log(`Servidor executando na porta ${port} - Acesse http://localhost:${port}`);
   });
 
 });
-
-module.exports = server;
